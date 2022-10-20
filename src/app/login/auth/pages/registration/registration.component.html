@@ -1,0 +1,99 @@
+
+<section class="">
+    <div class="mask d-flex align-items-center h-100 gradient-custom-3">
+        <div class="container h-100">
+            <div class="row d-flex justify-content-center align-items-center h-100">
+                <div class="col-12 col-md-9 col-lg-7 col-xl-6">
+                    <div class="card" style="border-radius: 15px;">
+                        <div class="card-body p-4">
+                            <h2 class="text-uppercase text-center mb-4">Create an account</h2>
+
+
+                            <div *ngIf="message" class="alert-success alert-dismissible fade show" role="alert"
+                                class="alert alert-success">
+                                <strong>you successfully</strong>
+                                <button (click)="closeAlert()" data-bs-dismiss="alert">Close</button>
+                            </div>
+
+                            <form [formGroup]="registerForm">
+
+                                <div class="form-outline mb-2">
+                                    <input type="text" class="form-control form-control-md" placeholder="Enter Name"
+                                        name="name" formControlName="name" />
+                                    <label class="form-label" for="form3Example1cg">Your Name</label>
+                                    <span style="color:red" *ngIf="name && name.invalid && name.touched">This field is
+                                        not Valid</span>
+                                </div>
+
+                                <div class="form-outline mb-2">
+                                    <input type="email" class="form-control form-control-md" placeholder="Enter email"
+                                        name="email" formControlName="email" />
+                                    <label class="form-label" for="form3Example3cg">Your Email</label>
+                                    <span style="color:red" *ngIf="email && email.invalid && email.touched">This field
+                                        is not Valid</span>
+                                </div>
+
+                                <div class="form-outline mb-2">
+                                    <input type="password" class="form-control form-control-md"
+                                        placeholder="Enter password" formControlName="password" name="password" />
+                                    <label class="form-label" for="form3Example4cg">Password</label>
+                                    <span style="color:red"
+                                        *ngIf="password && password.invalid && password.touched">This field is not
+                                        Valid</span>
+                                </div>
+
+                                <div class="form-outline mb-2">
+                                    <input type="password" class="form-control form-control-md"
+                                        placeholder="Enter reenter password" formControlName="cpassword"
+                                        name="cpassword" />
+                                    <label class="form-label" for="form3Example4cdg">Confirm password</label>
+                                    <span style="color:red"
+                                        *ngIf="cpassword && cpassword.invalid && cpassword.touched">This field is not
+                                        Valid</span>
+                                </div>
+
+                                <div class="form-outline mb-2">
+                                    <input type="date" placeholder="Enter DOB" class="form-control form-control-md"
+                                        name="dob" formControlName="dob" />
+                                    <label class="form-label" for="form3Example1cg">DOB</label>
+                                    <span style="color:red" *ngIf="dob && dob.invalid && dob.touched">This field is not
+                                        Valid</span>
+                                </div>
+
+                                <div class="form-outline mb-2">
+                                    <input type="text" placeholder="Enter mobile number"
+                                        class="form-control form-control-md" name="mob" formControlName="mob" />
+                                    <label class="form-label" for="form3Example1cg">Mob</label>
+                                    <span style="color:red" *ngIf="mob && mob.invalid && mob.touched">This field is not
+                                        Valid</span>
+                                </div>
+
+                                <div class="form-outline mb-2">
+                                    <select class="select form-control form-control-md" name="access"
+                                        formControlName="access">
+                                        <option value="1" disabled>Choose option</option>
+                                        <option value="2">Full Access</option>
+                                        <option value="3">Semi Access</option>
+                                    </select>
+                                    <label class="form-label select-label">Access Level</label>
+                                    <span style="color:red" *ngIf="access && access.invalid && access.touched">This
+                                        field is not Valid</span>
+                                </div>
+
+                                <div class="d-flex pt-3">
+                                    <button type="button" class="btn btn-light btn-md">Reset all</button>
+                                    <button [disabled]="registerForm.invalid"
+                                        class="btn btn-success btn-md ms-5 float-end" (click)="registerUser()">Submit
+                                        form</button>
+                                </div>
+
+                                <p class="text-center text-muted mt-5 mb-0">Have already an account? <a href="#!"
+                                        class="fw-bold text-body"><u>Login here</u></a></p>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
