@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkshopping_cart=self.webpackChunkshopping_cart||[]).push([[511],{1511:(s,o,n)=>{n.r(o),n.d(o,{SharedModule:()=>e});var d=n(6895),u=n(8256);let e=(()=>{class a{}return a.\u0275fac=function(l){return new(l||a)},a.\u0275mod=u.oAB({type:a}),a.\u0275inj=u.cJS({imports:[d.ez]}),a})()}}]);
